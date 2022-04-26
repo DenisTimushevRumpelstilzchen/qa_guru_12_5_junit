@@ -7,7 +7,6 @@ import org.junit.jupiter.api.Test;
 
 public class SimpleTest {
 
-    @Disabled
     @DisplayName("Демонстрационный тест")
     @Test
     void firstTest() {
