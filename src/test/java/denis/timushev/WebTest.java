@@ -23,4 +23,18 @@ public class WebTest {
                 .find(Condition.text("Selenide"))
                 .shouldBe(visible);
     }
+
+    @DisplayName("Проверка поиска в яндексе по слову JUnit")
+    @Test
+    void jUnitSearchTest() {
+        //        Предусловия:
+        Selenide.open("https://ya.ru");
+        //        Шаги:
+        $("#text").setValue("JUnit");
+        $("button[type='submit']").click();
+        //        Ожидаемый результат:
+        $$(".serp-item")
+                .find(Condition.text("JUnit"))
+                .shouldBe(visible);
+    }
 }
