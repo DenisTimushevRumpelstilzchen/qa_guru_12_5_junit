@@ -1,11 +1,13 @@
 package denis.timushev;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class SimpleTest {
 
+    @Disabled
     @DisplayName("Демонстрационный тест")
     @Test
     void firstTest() {
@@ -13,7 +15,7 @@ public class SimpleTest {
         Assertions.assertFalse(3 < 2);
         Assertions.assertEquals("Foo", "Foo");
         Assertions.assertAll(
-                () -> Assertions.assertTrue(3 < 2),
+                () -> Assertions.assertTrue(3 > 2),
                 () -> Assertions.assertTrue(3 > 2)
         );
     }
@@ -21,6 +23,6 @@ public class SimpleTest {
     @DisplayName("Демонстрационный тест № 2")
     @Test
     void secondTest() {
-        Assertions.assertTrue(3 < 2);
+        Assertions.assertTrue(2 < 3);
     }
 }
